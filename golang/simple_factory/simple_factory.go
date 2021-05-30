@@ -7,11 +7,16 @@ type Animal interface {
 	Say()
 }
 
+const (
+	Dog int = 1
+	Cat int = 2
+)
+
 //NewAnimal
 func NewAnimal(t int) Animal {
-	if t == 1 {
+	if t == Dog {
 		return &dog{}
-	} else if t == 2 {
+	} else if t == Cat {
 		return &cat{}
 	}
 	return nil
